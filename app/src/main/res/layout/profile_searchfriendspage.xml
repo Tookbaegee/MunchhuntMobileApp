@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/friendSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-55dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp">
+
+        <EditText
+            android:id="@+id/et_FriendSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Search for users to add" />
+
+        <ListView
+            android:id="@+id/lv_UserSearchList"
+            android:layout_width="wrap_content"
+            android:layout_height="480dp"
+            android:layout_below="@+id/et_FriendSearch"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="55dp"
+            android:background="@color/white"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp">
+
+        </ListView>
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/holo_green_light"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MunchHuntProject</string>
+    <string name="title_activity_register">register</string>
+    <string name="title_activity_list_search">listSearch</string>
+    <string name="title_activity_list_view">ListView</string>
+    <string name="location">Location</string>
+    <string name="munch_rating">Munch Rating</string>
+    <string name="google_maps_key">AIzaSyCxDC75b0yA71-594xyVdH__3LBv-__RXk</string>
+
+    <string-array name="red_meat_values">
+        <item>Pork</item>
+        <item>Beef</item>
+    </string-array>
+
+    <string-array name="seafood_values">
+        <item>Fish</item>
+        <item>Crustacean</item>
+        <item>Shellfish</item>
+    </string-array>
+</resources>

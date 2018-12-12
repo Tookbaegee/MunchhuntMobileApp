@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="munchhunt.munchhuntproject.RegisterLogin.MainActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ViewSwitcher
+            android:id="@+id/switcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:inAnimation="@anim/anim_fadein">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/logo"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+        </ViewSwitcher>
+
+
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switcher"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Email"
+            android:drawablePadding="5dp"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawableTint="@color/gray"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:drawablePadding="5dp"
+            android:hint="Password"
+            android:textColorHint="@color/gray"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_lock_open"
+            android:drawableTint="@color/gray"
+            />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Login"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/holo_green_light"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/login"
+            android:layout_marginTop="15dp"
+            android:text="Register"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/holo_green_light"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register"
+            android:layout_centerHorizontal="true"
+            android:text="Forgot Password?"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

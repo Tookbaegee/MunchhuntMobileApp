@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="munchhunt.munchhuntproject.RegisterLogin.MainActivity"
+    android:background="@drawable/mainpage_gradient">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/createUsername"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:textColorHint="@color/white"
+            android:ems="10"
+            android:textColor="@color/white"
+            android:hint="Create Username"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawableTint="@color/white"
+            android:drawablePadding="5dp"
+            />
+
+        <EditText
+            android:id="@+id/createPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createUsername"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Create Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:drawableLeft="@drawable/ic_lock_open"
+            android:drawableTint="@color/white"
+            android:drawablePadding="5dp"/>
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Create"
+            android:background="@drawable/rounded_button"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/holo_green_light"
+            android:textAllCaps="false"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

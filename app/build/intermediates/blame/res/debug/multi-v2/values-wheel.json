@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Android Copies\\MunchHunt\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-wheel\\values-wheel.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kyl3g\\.gradle\\caches\\transforms-1\\files-1.1\\CursorWheelLayout-1.1.0.aar\\68733ac2b386e8388c52b93409315a42\\res\\values-wheel\\values-wheel.xml",
+                    "from": {
+                        "startLines": "2,19,20",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,903,958",
+                        "endLines": "18,19,20",
+                        "endColumns": "24,54,48",
+                        "endOffsets": "898,953,1002"
+                    }
+                }
+            ]
+        }
+    ]
+}

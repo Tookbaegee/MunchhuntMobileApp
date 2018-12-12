@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">627773306689-r3raq3hkd95d11cmb4m44le3gt59jjmc.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://munchhunt-4c0a2.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">627773306689</string>
+    <string name="google_api_key" translatable="false">AIzaSyBHGCGsydux9tS1mk5rfjRvMHkTZTRd5rM</string>
+    <string name="google_app_id" translatable="false">1:627773306689:android:442a8e240d4c9e85</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBHGCGsydux9tS1mk5rfjRvMHkTZTRd5rM</string>
+    <string name="google_storage_bucket" translatable="false">munchhunt-4c0a2.appspot.com</string>
+    <string name="project_id" translatable="false">munchhunt-4c0a2</string>
+</resources>

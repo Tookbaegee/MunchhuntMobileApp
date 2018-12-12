@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_action_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        app:civ_border_color="@color/hot_pink"
+        app:civ_border_width="3dp"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:text="Title"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutPork"
+            android:layout_marginRight="30dp">
+
+            <ImageView
+                android:id="@+id/porkCheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_pork_bw"
+                android:layout_marginRight="5dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:layout_toRightOf="@+id/porkCheck"
+                android:id="@+id/porkBar"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutBeef"
+            android:layout_toRightOf="@id/layoutPork"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:id="@+id/beefCheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_beef_bw"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:id="@+id/beefBar"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutFish"
+            android:layout_below="@id/layoutPork"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/fishCheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_seafood_bw"
+                android:layout_marginRight="5dp"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:layout_toRightOf="@id/fishCheck"
+                android:id="@+id/fishBar"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutCrustacean"
+            android:layout_below="@+id/layoutBeef"
+            android:layout_toRightOf="@id/layoutFish"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/crustaceanCheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_crustacean_bw"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:id="@+id/crustaceanBar"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutShellfish"
+            android:layout_below="@+id/layoutFish"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/shellfishCheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_shellfish_bw"
+                android:layout_marginRight="5dp"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:layout_toRightOf="@id/shellfishCheck"
+                android:id="@+id/shellfishBar"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutWhiteMeat"
+            android:layout_below="@+id/layoutCrustacean"
+            android:layout_toRightOf="@+id/layoutShellfish"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/whiteMeatcheck"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_whitemeat_bw"
+                android:layout_marginLeft="20dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:id="@+id/whiteMeatBar"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutNuts"
+            android:layout_below="@+id/layoutShellfish"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/nutsCheck"
+                android:src="@drawable/ic_peanut_bw"
+                android:layout_marginRight="5dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:layout_toRightOf="@id/nutsCheck"
+                android:id="@+id/nutsBar"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutGluten"
+            android:layout_below="@+id/layoutWhiteMeat"
+            android:layout_toRightOf="@id/layoutNuts"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/glutenCheck"
+                android:src="@drawable/ic_gluten_bw"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:id="@+id/glutenBar"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutDairy"
+            android:layout_below="@+id/layoutNuts"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/dairyCheck"
+                android:src="@drawable/ic_dairy_bw"
+                android:layout_marginRight="5dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:layout_toRightOf="@id/dairyCheck"
+                android:id="@+id/dairyBar"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutEggs"
+            android:layout_below="@+id/layoutGluten"
+            android:layout_toRightOf="@+id/layoutDairy"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/eggsCheck"
+                android:src="@drawable/ic_egg_bw"
+                android:layout_marginLeft="10dp"
+                />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:background="@color/light_grey"
+                android:id="@+id/eggsBar"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

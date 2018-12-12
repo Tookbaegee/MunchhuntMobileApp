@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "627773306689",
+    "firebase_url": "https://munchhunt-4c0a2.firebaseio.com",
+    "project_id": "munchhunt-4c0a2",
+    "storage_bucket": "munchhunt-4c0a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627773306689:android:442a8e240d4c9e85",
+        "android_client_info": {
+          "package_name": "munchhunt.munchhuntproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627773306689-do7of446pte2ioh1ohhrjl6s9h8m117q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "munchhunt.munchhuntproject",
+            "certificate_hash": "a7d79fed4a0584126bce2941353456b59bf4a081"
+          }
+        },
+        {
+          "client_id": "627773306689-r3raq3hkd95d11cmb4m44le3gt59jjmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHGCGsydux9tS1mk5rfjRvMHkTZTRd5rM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627773306689-r3raq3hkd95d11cmb4m44le3gt59jjmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

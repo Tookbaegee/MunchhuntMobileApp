@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User's Name"
+        android:id="@+id/tvUsername"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRequestType"
+        android:textSize="14dp"
+        android:layout_below="@+id/tvUsername"
+        android:text="Request Type"
+        android:layout_marginLeft="5dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decline"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnDecline"
+        android:backgroundTint="@color/holo_green_light"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"
+        android:layout_marginRight="5dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:id="@+id/btnAccept"
+        android:layout_toLeftOf="@id/btnDecline"
+        android:backgroundTint="@color/holo_green_light"
+        android:background="@drawable/rounded_button"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"/>
+
+
+
+</RelativeLayout>

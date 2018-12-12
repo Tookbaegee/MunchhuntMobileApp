@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_border"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Title"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:id="@+id/tagLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            >
+
+            <TextView
+                android:id="@+id/foodTypeTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Type"
+                android:background="@color/holo_green_light"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="3dp"/>
+
+            <TextView
+                android:id="@+id/restaurantTypeTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Type"
+                android:background="@color/holo_green_light"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:layout_toRightOf="@+id/foodTypeTag"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/pricingTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pricing"
+                android:background="@color/holo_green_light"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:layout_toRightOf="@id/restaurantTypeTag"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/windowMunchRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Munch Rating"
+            android:layout_below="@+id/tagLayout"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/windowReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:layout_below="@+id/windowMunchRating"
+            android:layout_centerHorizontal="true"/>
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

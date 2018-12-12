@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/graylight"
+    android:orientation="vertical"
+    tools:context="munchhunt.munchhuntproject.Profile.Profile">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_marginTop="200dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayoutNumFriends">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Number of Friends"
+                android:id="@+id/tvNumFriends"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/numFriends"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="###"
+                android:layout_below="@+id/tvNumFriends"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/holo_green_light"
+        android:id="@+id/relLayout1">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_person_add"
+            android:tint="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btnAddFriend"/>
+
+        <ImageView
+            android:id="@+id/settingsBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_settings"
+            android:tint="@color/white" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_action_name"
+            android:layout_marginTop="30dp"
+            app:civ_border_color="@color/hot_pink"
+            app:civ_border_width="4dp" />
+
+        <TextView
+            android:id="@+id/fullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilePic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:text="Full name"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dietText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diet Pattern"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="10dp"/>
+    
+    <LinearLayout
+        android:id="@+id/dietLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dietText"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/column1Layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/porkCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_pork_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/porkBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/beefCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_beef_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/beefBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/fishCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_seafood_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/fishBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/crustaceanCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_crustacean_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:layout_toRightOf="@+id/porkCheck"
+                    android:id="@+id/crustaceanBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/shellfishCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_shellfish_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:layout_toRightOf="@+id/porkCheck"
+                    android:id="@+id/shellfishBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/whiteMeatcheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_whitemeat_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:layout_toRightOf="@+id/porkCheck"
+                    android:id="@+id/whiteMeatBar"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/column2layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/glutenCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_gluten_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/glutenBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/dairyCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_dairy_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/dairyBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/eggsCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_egg_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/eggsBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/soyCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_soy_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/soyBar"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/nutsCheck"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_peanut_bw"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="40dp"
+                    android:background="@color/light_grey"
+                    android:id="@+id/nutsBar"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@android:color/holo_green_light"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/navigation">
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+</RelativeLayout>

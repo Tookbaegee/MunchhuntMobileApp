@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/restName"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="@android:color/black"
+            android:textColorLink="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/munchTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restName"
+            android:hint="Title"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/munchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/munchTitle"
+            android:hint="Location"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/yelpRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/munchLocation"
+            android:hint="yelpRating"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/munchRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/munchLocation"
+            android:layout_toRightOf="@id/yelpRating"
+            android:layout_marginLeft="100dp"
+            android:hint="@string/munch_rating"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
