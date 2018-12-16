@@ -41,11 +41,11 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int id_wheel_menu_center_item = 0x7f0900a7;
-        public static final int id_wheel_view_angle = 0x7f0900a8;
-        public static final int inward = 0x7f0900af;
-        public static final int none = 0x7f0900ee;
-        public static final int outward = 0x7f0900f7;
+        public static final int id_wheel_menu_center_item = 0x7f0900a6;
+        public static final int id_wheel_view_angle = 0x7f0900a7;
+        public static final int inward = 0x7f0900ae;
+        public static final int none = 0x7f0900ed;
+        public static final int outward = 0x7f0900f6;
     }
     public static final class string {
         private string() {}

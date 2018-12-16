@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MunchHunt.iml" filepath="$PROJECT_DIR$/MunchHunt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MunchHuntProject.iml" filepath="$PROJECT_DIR$/MunchHuntProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

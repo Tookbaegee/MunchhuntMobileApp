@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android Copies\\MunchHunt\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
+            "outputFile": "D:\\Document\\MunchHunt\\MunchHuntProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-or\\values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kyl3g\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\f806faed8275fca70ea739b1b67e1e3c\\res\\values-or\\values.xml",
+                    "source": "C:\\Users\\top12\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\36201df4a8f25abac6c8a263c4f11b42\\res\\values-or\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\kyl3g\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\ad11bdf4fb95a0e1be4143688bf2bafb\\res\\values-or\\values.xml",
+                    "source": "C:\\Users\\top12\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\47a42c12d25062f07950e1e06d8ab73e\\res\\values-or\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

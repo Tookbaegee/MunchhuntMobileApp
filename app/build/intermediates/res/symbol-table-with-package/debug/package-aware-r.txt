@@ -1174,9 +1174,8 @@ id disableHome
 id distanceFilter
 id doneFriendAdder
 id dragger
+id editHandle
 id editName
-id editPassword1
-id editPassword2
 id edit_query
 id eggsBar
 id eggsCheck
@@ -1452,6 +1451,8 @@ id userPic
 id userWheel
 id username
 id usersname
+id verifyPassword1
+id verifyPassword2
 id verifyPasswordInput
 id viewPager
 id view_offset_helper

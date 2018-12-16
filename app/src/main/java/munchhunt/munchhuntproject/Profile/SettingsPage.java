@@ -120,6 +120,7 @@ public class SettingsPage extends AppCompatActivity {
         mEditHandle = (EditText) findViewById(R.id.editHandle);
         mEditPassword = (EditText) findViewById(R.id.verifyPassword1);
         mVerifyPassword = (EditText) findViewById(R.id.verifyPassword2);
+        int test = 1;
 
         mSignOutBtn = (Button) findViewById(R.id.signOutBtn);
         mSaveChangesBtn = (Button) findViewById(R.id.saveChangesBtn);
