@@ -1,112 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/profilePic"
-            android:layout_marginTop="5dp"
-            app:civ_border_color="@color/hot_pink"
-            app:civ_border_width="2dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/navigationBar">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@id/profilePic"
-            android:id="@+id/styleBar"
-            android:text="Edit Profile"
-            android:textSize="18sp"
-            android:background="@android:color/holo_green_light"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/styleBar"
-            android:id="@+id/editName"
-            android:hint="Edit your name"
-            android:layout_marginTop="10dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/profilePic"
+                app:civ_border_color="@color/hot_pink"
+                app:civ_border_width="2dp"/>
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/editName"
-            android:hint="Edit your password"
-            android:id="@+id/editPassword1"
-            android:layout_marginTop="10dp"
-            android:inputType="textPassword"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/profilePic"
+                android:id="@+id/styleBar"
+                android:text="Edit Profile"
+                android:textSize="18sp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
 
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/editPassword1"
-            android:hint="Enter password again"
-            android:id="@+id/editPassword2"
-            android:layout_marginTop="10dp"
-            android:inputType="textPassword"/>
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editName"
+                android:hint="Edit your name"
+                android:layout_marginTop="10dp"/>
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/saveChangesBtn"
-            android:layout_below="@id/editPassword2"
-            android:text="Save Changes"
-            android:textAllCaps="false"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_button"
-            android:backgroundTint="@color/holo_green_light"
-            android:textColor="@color/white"/>
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editHandle"
+                android:hint="Edit your handle"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Edit your password"
+                android:id="@+id/verifyPassword1"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter password again"
+                android:id="@+id/verifyPassword2"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveChangesBtn"
+                android:text="Save Changes"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/holo_green_light"
+                android:textColor="@color/white"/>
 
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/signOutBtn"
-            android:text="Sign Out"
-            android:background="@drawable/rounded_button"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
-            android:layout_below="@id/saveChangesBtn"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/holo_green_light"/>
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/signOutBtn"
+                android:text="Sign Out"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/holo_green_light"/>
 
-    </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
 
 
 
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationBar"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
         android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:itemBackground="@android:color/holo_green_light"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        app:menu="@menu/navigation">
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true">
 
     </android.support.design.widget.BottomNavigationView>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

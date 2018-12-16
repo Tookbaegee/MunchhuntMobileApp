@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +23,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import munchhunt.munchhuntproject.BottomNavigationViewHelper;
+import munchhunt.munchhuntproject.Callback.BooleanCallback;
 import munchhunt.munchhuntproject.Callback.CurrentUserCallback;
+import munchhunt.munchhuntproject.Callback.PartyCallback;
 import munchhunt.munchhuntproject.Map.MapsActivity;
 import munchhunt.munchhuntproject.Notifications.NotificationsPage;
+import munchhunt.munchhuntproject.Objects.Party;
 import munchhunt.munchhuntproject.Objects.User;
 import munchhunt.munchhuntproject.Party.PartyPage;
 import munchhunt.munchhuntproject.Party.Social;
@@ -40,8 +44,8 @@ public class SettingsPage extends AppCompatActivity {
     private FirebaseUser mUser;
     private DatabaseReference mDatabase;
     private de.hdodenhof.circleimageview.CircleImageView mProfilePic;
-    private EditText mEditName, mEditEmail, mEditPassword, mVerifyPassword;
-    private String id, name, email, password;
+    private EditText mEditName, mEditHandle, mEditPassword, mVerifyPassword;
+    private String id, name, email, password, handle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -68,9 +72,8 @@ public class SettingsPage extends AppCompatActivity {
         mSaveChangesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                id = mUser.getUid();
+                id = mEditHandle.getText().toString();
                 name = mEditName.getText().toString();
-                email = mEditEmail.getText().toString();
                 password = mEditPassword.getText().toString();
 
                 saveChanges();
@@ -114,8 +117,9 @@ public class SettingsPage extends AppCompatActivity {
 
     private void initializeElements(){
         mEditName = (EditText) findViewById(R.id.editName);
-        mEditPassword = (EditText) findViewById(R.id.editPassword1);
-        mVerifyPassword = (EditText) findViewById(R.id.editPassword2);
+        mEditHandle = (EditText) findViewById(R.id.editHandle);
+        mEditPassword = (EditText) findViewById(R.id.verifyPassword1);
+        mVerifyPassword = (EditText) findViewById(R.id.verifyPassword2);
 
         mSignOutBtn = (Button) findViewById(R.id.signOutBtn);
         mSaveChangesBtn = (Button) findViewById(R.id.saveChangesBtn);
@@ -126,29 +130,51 @@ public class SettingsPage extends AppCompatActivity {
     }
 
     private void saveChanges() {
-////        if (mEditName.getText().toString().matches("") || mEditEmail.getText().toString().matches("")
-////                || mEditPassword.getText().toString().matches("") || mVerifyPassword.getText().toString().matches("")) {
-////            Toast.makeText(SettingsPage.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-////            return;
-////        }
-//        if(mEditPassword.getText().toString().matches("") || mVerifyPassword.getText().toString().matches("")){
-//            Toast.makeText(SettingsPage.this, "Please complete the password requirements.", Toast.LENGTH_SHORT).show();
-//        }
-//        if (checkValidEmail(mEditEmail.getText().toString()) == false) {
-//            Toast.makeText(SettingsPage.this, "Please enter a valid email address.", Toast.LENGTH_SHORT).show();
-//            return;
-//        }
-//        if (!mEditPassword.getText().toString().equals(mVerifyPassword.getText().toString())) {
-//            Toast.makeText(SettingsPage.this, "Passwords don't match.", Toast.LENGTH_SHORT).show();
-//            return;
-//        } else {
-//            SocialFirebase.callCurrentUser(new CurrentUserCallback() {
-//                @Override
-//                public void callback(User currentUser) {
-//                    if()
-//                }
-//            });
-//        }
+        if(mEditHandle.getText().toString().matches("") && mEditName.getText().toString().matches("")
+                && mEditPassword.getText().toString().matches("") && mVerifyPassword.getText().toString().matches("")){
+            Toast.makeText(SettingsPage.this, "Please enter a field to change.", Toast.LENGTH_SHORT).show();
+        }
+        if(mEditPassword.getText().toString().matches("") || mVerifyPassword.getText().toString().matches("")){
+            Toast.makeText(SettingsPage.this, "Please verify your password.", Toast.LENGTH_SHORT).show();
+        }
+        if (!mEditPassword.getText().toString().equals(mVerifyPassword.getText().toString())) {
+            Toast.makeText(SettingsPage.this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            SocialFirebase.callCurrentUser(new CurrentUserCallback() {
+                @Override
+                public void callback(User currentUser) {
+                    if(!mEditName.getText().toString().matches("")){
+                        currentUser.setName(mEditName.getText().toString());
+                        Log.d("name changed", currentUser.getName());
+                        SocialFirebase.updateUser(currentUser);
+                    }
+//                    if(!mEditHandle.getText().toString().matches("")){
+//                        handle = mEditHandle.getText().toString();
+//                        SocialFirebase.callCurrentUser(new CurrentUserCallback() {
+//                            @Override
+//                            public void callback(final User currentUser) {
+//                                SocialFirebase.autoUpdateUserParty(currentUser, new PartyCallback<Party>() {
+//                                    @Override
+//                                    public void callback(Party party) {
+//                                        for (int i = 0; i < party.getparty().size(); i++){
+//                                            Log.d("entered party", party.getparty().get(i).toString());
+//                                            if(currentUser.getId().matches(party.getparty().get(i))){
+//                                                party.leaveParty(currentUser.getId());
+//                                                party.addToParty(handle);
+//                                                SocialFirebase.updateParty(party);
+//                                            }
+//                                        }
+//                                        SocialFirebase.changeUserId(currentUser, handle);
+//                                    }
+//                                });
+//                            }
+//                        });
+//                    }
+                    Toast.makeText(SettingsPage.this, "Settings saved!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
     }
 

@@ -79,7 +79,8 @@
             android:label="Recommend" />
         <activity
             android:name=".Profile.SettingsPage"
-            android:label="Settings" />
+            android:label="Settings"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Profile.RestaurantHistory"
             android:label="Restaurant History" />

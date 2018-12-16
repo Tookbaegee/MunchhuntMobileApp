@@ -53,9 +53,13 @@ public class SocialFirebase {
         userRef.child(id).setValue(userToBeUpdated);
     }
 
+    public static void changeUserId(User userToBeUpdated, String id){
+        String firebaseId = userToBeUpdated.getFirebaseId();
+        userRef.child(userToBeUpdated.getId()).child("id").setValue(id);
+    }
+
 
     public static void updateParty(Party partyToBeUpdated) {
-
         String id = partyToBeUpdated.getId();
         partyRef.child(id).setValue(partyToBeUpdated);
     }
