@@ -1434,11 +1434,9 @@ id tvHours
 id tvHoursTitle
 id tvNumFriends
 id tvPhone
-id tvRedMeats
 id tvRequestType
 id tvRestaurantName
 id tvRestaurants
-id tvSeafood
 id tvUsername
 id tvWebsite
 id tv_faUserName
@@ -1595,7 +1593,6 @@ layout social_page_bottompanel
 layout social_partyadderview
 layout social_partymemberpane
 layout support_simple_spinner_dropdown_item
-layout test_registerlogin_step2
 layout zxing_barcode_scanner
 layout zxing_capture
 menu activity_test_drawer
