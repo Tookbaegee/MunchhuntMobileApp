@@ -59,6 +59,7 @@ public class SettingsPage extends AppCompatActivity {
 
         initializeNavigationBar();
         initializeElements();
+        int i = 0;
 
 
         mSignOutBtn.setOnClickListener(new View.OnClickListener() {
