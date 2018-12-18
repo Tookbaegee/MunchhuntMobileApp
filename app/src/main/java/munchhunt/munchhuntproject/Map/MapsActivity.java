@@ -8,7 +8,6 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.MainThread;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
@@ -143,7 +142,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mRef1 = FirebaseDatabase.getInstance().getReference();
 
 
-
         initializeElements();
         if (savedInstanceState == null) {
             Toast.makeText(MapsActivity.this, "Map is ready!", Toast.LENGTH_SHORT);
@@ -153,7 +151,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void initializeElements(){
+    private void initializeElements() {
         // Autocomplete fragment, currently connected to Google Places
         placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
         //  mHeart = (ImageView) findViewById(R.id.reccomend_button);
@@ -173,10 +171,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED){
+                if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                     mDragger.setImageResource(R.drawable.ic_drag_down);
-                }
-                else if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED){
+                } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
                     mDragger.setImageResource(R.drawable.ic_drag_up);
                 }
             }
@@ -190,23 +187,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         mRestaurantList = (ListView) findViewById(R.id.lvRestaurants);
         final List<Restaurant> restaurants = new ArrayList<Restaurant>();
-        final RestaurantListAdapter rla = new RestaurantListAdapter(MapsActivity.this, R.layout.maplist_adapter_restaurantview1, restaurants);
+        final RestaurantListAdapter rla = new RestaurantListAdapter(MapsActivity.this, R.layout.maplist_adapter_restaurantview, restaurants);
         mRestaurantList.setAdapter(rla);
         readRestaurantData(new RestaurantDataCallback() {
             @Override
             public void onCallback(final ArrayList<Restaurant> restaurantList) {
                 rla.clear();
-                for(int i = 0; i < restaurantList.size(); i++) {
+                for (int i = 0; i < restaurantList.size(); i++) {
                     Restaurant temp = restaurantList.get(i);
                     boolean p = true;
                     boolean dist = true;
                     boolean t = true;
-                    if(price) {
+                    if (price) {
                         if (!(temp.getPrice().equals("$") || temp.getPrice().equals("$$"))) {
                             p = false;
                         }
                     }
-                    if(distance){
+                    if (distance) {
                         double lon1 = -111.9229;
                         double lon2 = Double.parseDouble(temp.getLongCoordinates());
                         double lat1 = 33.4628;
@@ -218,16 +215,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         double b = 24901 * dlon / 360 * Math.cos((lat1 + lat2) / 2);
 
                         double d = Math.pow((a * a + b * b), .5);
-                        if(!(d < 1.5)){
+                        if (!(d < 1.5)) {
                             dist = false;
                         }
                     }
-                    if(time){
-                        if(!(temp.getTime() < 4)){
+                    if (time) {
+                        if (!(temp.getTime() < 4)) {
                             t = false;
                         }
                     }
-                    if(p && dist && t){
+                    if (p && dist && t) {
                         restaurants.add(restaurantList.get(i));
                         rla.notifyDataSetChanged();
                     }
@@ -250,7 +247,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 public void callback(Party party) {
 
                                     final List<String> partyMembers = party.getparty();
-                                    for(int i = 0; i < partyMembers.size(); i++){
+                                    for (int i = 0; i < partyMembers.size(); i++) {
                                         SocialFirebase.readUserDietbyID(partyMembers.get(i), new DietPatternCallback() {
                                             @Override
 
@@ -263,8 +260,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     }
                                 }
                             });
-                        }
-                        else {
+                        } else {
                             rla.clearPartyMemberDPs();
                             rla.addPartyMemberDPs(currentUser.getDiet());
                             rla.assignMunchScore();
@@ -276,13 +272,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             }
         });
-
-
-
-
-
-
-
 
 
         mRestaurantList.setOnTouchListener(new ListView.OnTouchListener() {
@@ -310,12 +299,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mRestaurantList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Restaurant r = (Restaurant)parent.getAdapter().getItem(position);
+                Restaurant r = (Restaurant) parent.getAdapter().getItem(position);
                 Bundle b = new Bundle();
                 Intent intent = new Intent(MapsActivity.this, MenuView.class);
                 b.putSerializable("obj", r);
                 intent.putExtras(b);
-                Log.d("BEFORE",r.toString());
+                Log.d("BEFORE", r.toString());
                 startActivity(intent);
             }
         });
@@ -330,15 +319,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mDistanceFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(distance == false){ // If distance filter is currently not being applied and we want to turn it on...
+                if (distance == false) { // If distance filter is currently not being applied and we want to turn it on...
                     distance = true;
                     mDistanceFilter.setBackgroundColor(getResources().getColor(R.color.holo_green_light));
                     Log.d("color", "now red");
 
 
                     // Should update list
-                }
-                else if (distance == true){// If distance filter is currently being applied and we want to turn it off...
+                } else if (distance == true) {// If distance filter is currently being applied and we want to turn it off...
                     distance = false;
                     mDistanceFilter.setBackgroundColor(getResources().getColor(R.color.filter_grey));
                     Log.d("color", "now green");
@@ -349,17 +337,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     @Override
                     public void onCallback(final ArrayList<Restaurant> restaurantList) {
                         rla.clear();
-                        for(int i = 0; i < restaurantList.size(); i++) {
+                        for (int i = 0; i < restaurantList.size(); i++) {
                             Restaurant temp = restaurantList.get(i);
                             boolean p = true;
                             boolean dist = true;
                             boolean t = true;
-                            if(price) {
+                            if (price) {
                                 if (!(temp.getPrice().equals("$") || temp.getPrice().equals("$$"))) {
                                     p = false;
                                 }
                             }
-                            if(distance){
+                            if (distance) {
                                 double lon1 = -111.9229;
                                 double lon2 = Double.parseDouble(temp.getLongCoordinates());
                                 double lat1 = 33.4628;
@@ -371,16 +359,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 double b = 24901 * dlon / 360 * Math.cos((lat1 + lat2) / 2);
 
                                 double d = Math.pow((a * a + b * b), .5);
-                                if(!(d < 1.5)){
+                                if (!(d < 1.5)) {
                                     dist = false;
                                 }
                             }
-                            if(time){
-                                if(!(temp.getTime() < 4)){
+                            if (time) {
+                                if (!(temp.getTime() < 4)) {
                                     t = false;
                                 }
                             }
-                            if(p && dist && t){
+                            if (p && dist && t) {
                                 restaurants.add(restaurantList.get(i));
                                 rla.notifyDataSetChanged();
                             }
@@ -400,7 +388,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                         public void callback(Party party) {
                                             rla.clearPartyMemberDPs();
                                             final List<String> partyMembers = party.getparty();
-                                            for(int i = 0; i < partyMembers.size(); i++){
+                                            for (int i = 0; i < partyMembers.size(); i++) {
                                                 SocialFirebase.readUserDietbyID(partyMembers.get(i), new DietPatternCallback() {
                                                     @Override
 
@@ -435,14 +423,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mTimeFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(time == false){ // If distance filter is currently not being applied and we want to turn it on...
+                if (time == false) { // If distance filter is currently not being applied and we want to turn it on...
                     time = true;
                     mTimeFilter.setBackgroundColor(getResources().getColor(R.color.holo_green_light));
                     Log.d("color", "now red");
 
                     // Should update list
-                }
-                else if (time == true){// If distance filter is currently being applied and we want to turn it off...
+                } else if (time == true) {// If distance filter is currently being applied and we want to turn it off...
                     time = false;
                     mTimeFilter.setBackgroundColor(getResources().getColor(R.color.filter_grey));
                     Log.d("color", "now green");
@@ -453,17 +440,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     @Override
                     public void onCallback(final ArrayList<Restaurant> restaurantList) {
                         rla.clear();
-                        for(int i = 0; i < restaurantList.size(); i++) {
+                        for (int i = 0; i < restaurantList.size(); i++) {
                             Restaurant temp = restaurantList.get(i);
                             boolean p = true;
                             boolean dist = true;
                             boolean t = true;
-                            if(price) {
+                            if (price) {
                                 if (!(temp.getPrice().equals("$") || temp.getPrice().equals("$$"))) {
                                     p = false;
                                 }
                             }
-                            if(distance){
+                            if (distance) {
                                 double lon1 = -111.9229;
                                 double lon2 = Double.parseDouble(temp.getLongCoordinates());
                                 double lat1 = 33.4628;
@@ -475,16 +462,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 double b = 24901 * dlon / 360 * Math.cos((lat1 + lat2) / 2);
 
                                 double d = Math.pow((a * a + b * b), .5);
-                                if(!(d < 1.5)){
+                                if (!(d < 1.5)) {
                                     dist = false;
                                 }
                             }
-                            if(time){
-                                if(!(temp.getTime() < 4)){
+                            if (time) {
+                                if (!(temp.getTime() < 4)) {
                                     t = false;
                                 }
                             }
-                            if(p && dist && t){
+                            if (p && dist && t) {
                                 restaurants.add(restaurantList.get(i));
                                 rla.notifyDataSetChanged();
                             }
@@ -504,7 +491,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                         public void callback(Party party) {
                                             rla.clearPartyMemberDPs();
                                             final List<String> partyMembers = party.getparty();
-                                            for(int i = 0; i < partyMembers.size(); i++){
+                                            for (int i = 0; i < partyMembers.size(); i++) {
                                                 SocialFirebase.readUserDietbyID(partyMembers.get(i), new DietPatternCallback() {
                                                     @Override
 
@@ -539,14 +526,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mPriceFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(price == false){ // If distance filter is currently not being applied and we want to turn it on...
+                if (price == false) { // If distance filter is currently not being applied and we want to turn it on...
                     price = true;
                     mPriceFilter.setBackgroundColor(getResources().getColor(R.color.holo_green_light));
                     Log.d("color", "now red");
 
                     // Should update list
-                }
-                else if (price == true){// If distance filter is currently being applied and we want to turn it off...
+                } else if (price == true) {// If distance filter is currently being applied and we want to turn it off...
                     price = false;
                     mPriceFilter.setBackgroundColor(getResources().getColor(R.color.filter_grey));
                     Log.d("color", "now green");
@@ -557,17 +543,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     @Override
                     public void onCallback(final ArrayList<Restaurant> restaurantList) {
                         rla.clear();
-                        for(int i = 0; i < restaurantList.size(); i++) {
+                        for (int i = 0; i < restaurantList.size(); i++) {
                             Restaurant temp = restaurantList.get(i);
                             boolean p = true;
                             boolean dist = true;
                             boolean t = true;
-                            if(price) {
+                            if (price) {
                                 if (!(temp.getPrice().equals("$") || temp.getPrice().equals("$$"))) {
                                     p = false;
                                 }
                             }
-                            if(distance){
+                            if (distance) {
                                 double lon1 = -111.9229;
                                 double lon2 = Double.parseDouble(temp.getLongCoordinates());
                                 double lat1 = 33.4628;
@@ -579,16 +565,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 double b = 24901 * dlon / 360 * Math.cos((lat1 + lat2) / 2);
 
                                 double d = Math.pow((a * a + b * b), .5);
-                                if(!(d < 1.5)){
+                                if (!(d < 1.5)) {
                                     dist = false;
                                 }
                             }
-                            if(time){
-                                if(!(temp.getTime() < 4)){
+                            if (time) {
+                                if (!(temp.getTime() < 4)) {
                                     t = false;
                                 }
                             }
-                            if(p && dist && t){
+                            if (p && dist && t) {
                                 restaurants.add(restaurantList.get(i));
                                 rla.notifyDataSetChanged();
                             }
@@ -608,7 +594,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                         public void callback(Party party) {
                                             rla.clearPartyMemberDPs();
                                             final List<String> partyMembers = party.getparty();
-                                            for(int i = 0; i < partyMembers.size(); i++){
+                                            for (int i = 0; i < partyMembers.size(); i++) {
                                                 SocialFirebase.readUserDietbyID(partyMembers.get(i), new DietPatternCallback() {
                                                     @Override
 
@@ -645,26 +631,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-
-    public static void readRestaurantData(final RestaurantDataCallback myCallback)
-    {
+    public static void readRestaurantData(final RestaurantDataCallback myCallback) {
         mRef1.child("RestaurantData").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 ArrayList<Restaurant> rList = new ArrayList<>();
 
-                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
-                {
-                    final Restaurant r1 =(Restaurant) dataSnapshot1.getValue(Restaurant.class);
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                    final Restaurant r1 = (Restaurant) dataSnapshot1.getValue(Restaurant.class);
                     String id = r1.getId();
 
-                    Restaurant r = (Restaurant)dataSnapshot1.getValue(Restaurant.class);
+                    Restaurant r = (Restaurant) dataSnapshot1.getValue(Restaurant.class);
                     //   r.setId(id);
 
                     rList.add(r);
-                    //Log.d("Id", id);
-                    //   mRef.child("RestaurantData").child(id).child("RestaurantItems").setValue(null);
-                    // mRef.child("RestaurantData").child(id).child("businessInfo").child("RestaurantItems").setValue(new RestaurantItems());
                 }
 
                 myCallback.onCallback(rList);
@@ -877,47 +857,40 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     // Used to mark the reccomended restaurants
-    public void markRestaurants(){
+    public void markRestaurants() {
         readRestaurantData(new RestaurantDataCallback() {
             @Override
             public void onCallback(ArrayList<Restaurant> restaurantList) {
                 markerList = new ArrayList<>();
-                for (int i = 0; i < restaurantList.size(); i++){
-                    Restaurant b  = restaurantList.get(i);
+                for (int i = 0; i < restaurantList.size(); i++) {
+                    Restaurant b = restaurantList.get(i);
 
                     RestaurantItems rItems = new RestaurantItems();
                     rItems = b.getRestaurantItems();
 
-
                     String snippet = b.getAlias() + "_" +
                             b.getPrice() + "_";
-                    LatLng restaurantCoor = new LatLng(Double.parseDouble(b.getLatCoordinates()),Double.parseDouble(b.getLongCoordinates()));
+                    LatLng restaurantCoor = new LatLng(Double.parseDouble(b.getLatCoordinates()), Double.parseDouble(b.getLongCoordinates()));
                     MarkerOptions options = new MarkerOptions()
                             .position(restaurantCoor)
                             .title(b.getName().toString())
                             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
                             .snippet(snippet);
 
-
-
                     final CustomInfoWindowAdapter ciw = new CustomInfoWindowAdapter(MapsActivity.this);
                     SocialFirebase.callCurrentUser(new CurrentUserCallback() {
 
                         @Override
                         public void callback(final User currentUser) {
-
-
                             SocialFirebase.checkInParty(currentUser.getId(), new BooleanCallback() {
                                 @Override
                                 public void callback(boolean data) {
                                     if (data) {
-
                                         SocialFirebase.autoUpdateUserParty(currentUser, new PartyCallback<Party>() {
                                             @Override
                                             public void callback(Party party) {
-
                                                 final List<String> partyMembers = party.getparty();
-                                                for(int i = 0; i < partyMembers.size(); i++){
+                                                for (int i = 0; i < partyMembers.size(); i++) {
                                                     SocialFirebase.readUserDietbyID(partyMembers.get(i), new DietPatternCallback() {
                                                         @Override
 
@@ -939,8 +912,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     }
                                 }
                             });
-
-
                         }
                     });
                     mMarker = mMap.addMarker(options);
@@ -957,14 +928,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     });
                 }
-
-
-
-
             }
         });
     }
-
 
     // Saves and loads map state when user opens map
     protected void onPause() {
@@ -972,6 +938,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         MapStateManager mgr = new MapStateManager(this);
         mgr.saveMapState(mMap);
     }
+
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
@@ -1028,7 +995,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
     }
 
-    private void initializeNavigationBar(){
+    private void initializeNavigationBar() {
         // Bottom toolbar
         navBar = (BottomNavigationView) findViewById(R.id.navigationBar);
         BottomNavigationViewHelper.disableShiftMode(navBar);
@@ -1051,10 +1018,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 SocialFirebase.checkInParty(currentUser.getId(), new BooleanCallback() {
                                     @Override
                                     public void callback(boolean data) {
-                                        if(data){
+                                        if (data) {
                                             startActivity(new Intent(MapsActivity.this, PartyPage.class));
-                                        }
-                                        else{
+                                        } else {
                                             startActivity(new Intent(MapsActivity.this, CreateOrJoinPage.class));
                                         }
                                     }
@@ -1079,17 +1045,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 
-    private void setRecommendZoom(LatLng latLng, float zoom){
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, DEFAULT_ZOOM));
-        hideSoftKeyboard();
 
-    }
-
-    public void zoomCurrentLocation()
-    {
-        CameraUpdate center=
+    public void zoomCurrentLocation() {
+        CameraUpdate center =
                 CameraUpdateFactory.newLatLng(ASUcoordinates);
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(16f);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16f);
 
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
@@ -1103,9 +1063,4 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onInfoWindowClick(Marker marker) {
         Toast.makeText(this, marker.getTitle(), Toast.LENGTH_SHORT).show();
     }
-
-//    @Override
-//    public void onInfoWindowClick(Marker marker) {
-//        Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
-//    }
 }

@@ -48,9 +48,19 @@
                     android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:layout_weight="5"
-                    android:layout_marginTop="80dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_filters"
+                    android:tint="@color/white"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/place_autocomplete_fragment"/>
 
 
                 <android.support.design.widget.BottomNavigationView
@@ -65,9 +75,6 @@
                     android:layout_alignParentBottom="true">
 
                 </android.support.design.widget.BottomNavigationView>
-
-
-
 
 
             </RelativeLayout>

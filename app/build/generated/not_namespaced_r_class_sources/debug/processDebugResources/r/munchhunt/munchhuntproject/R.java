@@ -4812,7 +4812,7 @@ public final class R {
     public static final int grid_item=0x7f0b002c;
     public static final int maplist_adapter_menuview=0x7f0b002d;
     public static final int maplist_adapter_restaurantview=0x7f0b002e;
-    public static final int maplist_adapter_restaurantview1=0x7f0b002f;
+    public static final int maplist_adapter_restaurantview =0x7f0b002f;
     public static final int maplist_bottompanel=0x7f0b0030;
     public static final int maplist_list=0x7f0b0031;
     public static final int maplist_map=0x7f0b0032;

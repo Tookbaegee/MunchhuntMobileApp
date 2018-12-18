@@ -94,23 +94,6 @@ public class Profile extends AppCompatActivity {
             }
         };
 
-
-
-
-//        SocialFirebase.callCurrentUser(new CurrentUserCallback() {
-//            @Override
-//            public void callback(User currentUser) {
-//                if(!currentUser.getId().equals("1XewZvz0XEcTQ1A4iTinSGycVQj1"))
-//                {
-//                    mProfilePic.setImageResource(android.R.color.transparent);
-//                }
-//                else
-//                {
-//                    mProfilePic.setImageResource(R.drawable.adrianehot);
-//                }
-//            }
-//       });
-
         SocialFirebase.callCurrentUser(new CurrentUserCallback() {
             @Override
             public void callback(User currentUser) {
