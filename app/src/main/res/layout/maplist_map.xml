@@ -43,24 +43,27 @@
                 android:layout_height="match_parent"
                 android:id="@+id/navBarLayout">
 
-                <fragment
-                    android:id="@+id/place_autocomplete_fragment"
-                    android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                <munchhunt.munchhuntproject.Map.KeywordCompletionView
+                    android:id="@+id/foodSearchBar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:drawableTint="@color/filter_grey"
+                    android:textColorHint="@color/filter_grey"
+                    android:hint="Enter food keywords"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/white"/>
 
                 <ImageView
+                    android:id="@+id/filterButton"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:src="@drawable/ic_filters"
                     android:tint="@color/white"
-                    android:layout_marginLeft="9dp"
+                    android:layout_marginLeft="12dp"
                     android:layout_marginTop="3dp"
-                    android:layout_below="@+id/place_autocomplete_fragment"/>
+                    android:layout_below="@+id/foodSearchBar"/>
 
 
                 <android.support.design.widget.BottomNavigationView

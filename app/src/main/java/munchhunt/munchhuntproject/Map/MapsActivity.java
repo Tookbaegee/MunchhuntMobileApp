@@ -1,11 +1,15 @@
 package munchhunt.munchhuntproject.Map;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.location.Location;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,13 +24,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -63,6 +71,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,6 +125,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     BottomNavigationView navBar;
     private ArrayList<Restaurant> list;
     private ImageView mDragger;
+    private ImageView mFilterButton;
+    private Button mQuickEatsBtn, mSitDownBtn;
 
     private RelativeLayout mRelativeLayout;
     BottomSheetBehavior bottomSheetBehavior;
@@ -132,8 +144,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     // Filters
     private Button mDistanceFilter, mTimeFilter, mPriceFilter;
     private boolean distance = false, time = false, price = false;
+    private boolean quickeats = false, sitdown = false;
 
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,13 +166,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void initializeElements() {
-        // Autocomplete fragment, currently connected to Google Places
-        placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-        //  mHeart = (ImageView) findViewById(R.id.reccomend_button);
-        EditText fragmentText = (EditText) placeAutocompleteFragment.getView().findViewById(R.id.place_autocomplete_search_input);
-        fragmentText.setHint("Search for a restaurant");
-        fragmentText.setHintTextColor(getResources().getColor(R.color.white));
-        fragmentText.setTextColor(Color.WHITE);
+//        // Autocomplete fragment, currently connected to Google Places
+//        placeAutocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+//        //  mHeart = (ImageView) findViewById(R.id.reccomend_button);
+//        EditText fragmentText = (EditText) placeAutocompleteFragment.getView().findViewById(R.id.place_autocomplete_search_input);
+//        fragmentText.setHint("Search for a restaurant");
+//        fragmentText.setHintTextColor(getResources().getColor(R.color.white));
+//        fragmentText.setTextColor(Color.WHITE);
 
         list = new ArrayList<Restaurant>();
 
@@ -183,6 +197,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 mDragger.setImageResource(R.drawable.ic_loading);
             }
         });
+        getLocationPermission();
+        autoComplete();
         markRestaurants();
 
         mRestaurantList = (ListView) findViewById(R.id.lvRestaurants);
@@ -272,7 +288,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             }
         });
-
 
         mRestaurantList.setOnTouchListener(new ListView.OnTouchListener() {
             @Override
@@ -626,7 +641,48 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         });
 
-        getLocationPermission();
+        mFilterButton = (ImageView) findViewById(R.id.filterButton);
+        mFilterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(MapsActivity.this);
+                dialog.setContentView(R.layout.maplist_filter_popup);
+                dialog.setTitle("Title...");
+                EditText mDistanceInput = (EditText) dialog.findViewById(R.id.distanceInput);
+                EditText mPriceInput = (EditText) dialog.findViewById(R.id.priceInput);
+                mQuickEatsBtn = (Button) dialog.findViewById(R.id.quickEatsButton);
+                mSitDownBtn = (Button) dialog.findViewById(R.id.sitDownButton);
+
+                mQuickEatsBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(quickeats == false){
+                            quickeats = true;
+                            mQuickEatsBtn.getBackground().setColorFilter(getResources().getColor(R.color.hot_pink), PorterDuff.Mode.SRC);
+                        }else if(quickeats == true){
+                            quickeats = false;
+                            mQuickEatsBtn.getBackground().setColorFilter(getResources().getColor(R.color.filter_grey), PorterDuff.Mode.SRC);
+                        }
+                    }
+                });
+                mSitDownBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(sitdown == false){
+                            sitdown = true;
+                            mSitDownBtn.getBackground().setColorFilter(getResources().getColor(R.color.hot_pink), PorterDuff.Mode.SRC);
+                        }else if(sitdown == true){
+                            sitdown = false;
+                            mSitDownBtn.getBackground().setColorFilter(getResources().getColor(R.color.filter_grey), PorterDuff.Mode.SRC);
+                        }
+                    }
+                });
+                dialog.show();
+                Window window = dialog.getWindow();
+                window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+            }
+        });
+
         initializeNavigationBar();
     }
 
@@ -666,28 +722,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .enableAutoManage(this, this)
                 .build();
 
-        mPlaceAutocompleteAdapter = new PlaceAutocompleteAdapter(this, mGoogleApiClient, LAT_LNG_BOUNDS, null);
-
-        placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-            @Override
-            public void onPlaceSelected(Place place) {
-                final LatLng latLngLoc = place.getLatLng();
-
-                if (marker != null) {
-                    marker.remove();
-                }
-                moveCamera(new LatLng(place.getViewport().getCenter().latitude,
-                        place.getViewport().getCenter().longitude), DEFAULT_ZOOM);
-                markerInfo(place);
-                mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapsActivity.this));
-
-            }
-
-            @Override
-            public void onError(Status status) {
-
-            }
-        });
+//        mPlaceAutocompleteAdapter = new PlaceAutocompleteAdapter(this, mGoogleApiClient, LAT_LNG_BOUNDS, null);
+//
+//        placeAutocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+//            @Override
+//            public void onPlaceSelected(Place place) {
+//                final LatLng latLngLoc = place.getLatLng();
+//
+//                if (marker != null) {
+//                    marker.remove();
+//                }
+//                moveCamera(new LatLng(place.getViewport().getCenter().latitude,
+//                        place.getViewport().getCenter().longitude), DEFAULT_ZOOM);
+//                markerInfo(place);
+//                mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapsActivity.this));
+//
+//            }
+//
+//            @Override
+//            public void onError(Status status) {
+//
+//            }
+//        });
         hideSoftKeyboard();
         zoomCurrentLocation();
     }
@@ -785,49 +841,49 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-    // Places API Autocomplete suggestions
-    private AdapterView.OnItemClickListener mAutocompleteClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            hideSoftKeyboard();
+//    // Places API Autocomplete suggestions
+//    private AdapterView.OnItemClickListener mAutocompleteClickListener = new AdapterView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//            hideSoftKeyboard();
+//
+//            final AutocompletePrediction item = mPlaceAutocompleteAdapter.getItem(i);
+//            final String placeId = item.getPlaceId();
+//
+//            PendingResult placeResult = Places.GeoDataApi
+//                    .getPlaceById(mGoogleApiClient, placeId);
+//            placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
+//        }
+//    };
 
-            final AutocompletePrediction item = mPlaceAutocompleteAdapter.getItem(i);
-            final String placeId = item.getPlaceId();
-
-            PendingResult placeResult = Places.GeoDataApi
-                    .getPlaceById(mGoogleApiClient, placeId);
-            placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
-        }
-    };
-
-    private ResultCallback<PlaceBuffer> mUpdatePlaceDetailsCallback = new ResultCallback<PlaceBuffer>() {
-        @Override
-        public void onResult(@NonNull PlaceBuffer places) {
-            if (!places.getStatus().isSuccess()) {
-                Log.d(TAG, "onResult: Place query did not complete successfully: " + places.getStatus().toString());
-                places.release();
-                return;
-            }
-            final Place place = places.get(0);
-
-            try {
-                mPlace = new PlaceInfo();
-                mPlace.setName(place.getName().toString());
-                Log.d(TAG, "onResult: name: " + place.getName());
-                mPlace.setAddress(place.getAddress().toString());
-                Log.d(TAG, "onResult: address: " + place.getAddress());
-                mPlace.setId(place.getId());
-                Log.d(TAG, "onResult: id:" + place.getId());
-                mPlace.setLatLng(place.getLatLng());
-                Log.d(TAG, "onResult: latlng: " + place.getLatLng());
-            } catch (NullPointerException e) {
-                Log.e(TAG, "onResult: NullPointerException: " + e.getMessage());
-            }
-            moveCamera(new LatLng(place.getViewport().getCenter().latitude, place.getViewport().getCenter().longitude), DEFAULT_ZOOM);
-
-            places.release();
-        }
-    };
+//    private ResultCallback<PlaceBuffer> mUpdatePlaceDetailsCallback = new ResultCallback<PlaceBuffer>() {
+//        @Override
+//        public void onResult(@NonNull PlaceBuffer places) {
+//            if (!places.getStatus().isSuccess()) {
+//                Log.d(TAG, "onResult: Place query did not complete successfully: " + places.getStatus().toString());
+//                places.release();
+//                return;
+//            }
+//            final Place place = places.get(0);
+//
+//            try {
+//                mPlace = new PlaceInfo();
+//                mPlace.setName(place.getName().toString());
+//                Log.d(TAG, "onResult: name: " + place.getName());
+//                mPlace.setAddress(place.getAddress().toString());
+//                Log.d(TAG, "onResult: address: " + place.getAddress());
+//                mPlace.setId(place.getId());
+//                Log.d(TAG, "onResult: id:" + place.getId());
+//                mPlace.setLatLng(place.getLatLng());
+//                Log.d(TAG, "onResult: latlng: " + place.getLatLng());
+//            } catch (NullPointerException e) {
+//                Log.e(TAG, "onResult: NullPointerException: " + e.getMessage());
+//            }
+//            moveCamera(new LatLng(place.getViewport().getCenter().latitude, place.getViewport().getCenter().longitude), DEFAULT_ZOOM);
+//
+//            places.release();
+//        }
+//    };
 
     private void markerInfo(Place place) {
         String id = place.getId();
@@ -1062,5 +1118,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onInfoWindowClick(Marker marker) {
         Toast.makeText(this, marker.getTitle(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void autoComplete(){
+        String[] keywordTest = new String[]{
+                "Chinese",
+                "Sit-Down",
+                "Quick-Eats",
+                "Desserts",
+                "Japanese",
+                "Mexican",
+                "Coffee",
+                "Italian",
+        };
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keywordTest);
+
+        KeywordCompletionView completionView = (KeywordCompletionView) findViewById(R.id.foodSearchBar);
+        completionView.setAdapter(adapter);
+
     }
 }

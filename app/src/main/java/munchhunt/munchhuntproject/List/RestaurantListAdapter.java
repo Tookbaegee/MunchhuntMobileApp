@@ -66,7 +66,6 @@ public class    RestaurantListAdapter extends ArrayAdapter<restaurant> {
             holder.name = (TextView) convertView.findViewById(R.id.restName);
             holder.Title = (TextView) convertView.findViewById(R.id.munchTitle);
             holder.Direction = (TextView) convertView.findViewById(R.id.munchLocation);
-            holder.yelpRating = (TextView) convertView.findViewById(R.id.yelpRating);
             holder.munchRating = (TextView)  convertView.findViewById(R.id.munchRating);
 
             convertView.setTag(holder);

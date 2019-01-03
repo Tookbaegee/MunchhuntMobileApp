@@ -21,6 +21,7 @@ MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\Kyle\.gradle\caches\tr
 MERGED from [github.hellocsl:CursorWheelLayout:1.1.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\CursorWheelLayout-1.1.0.aar\e21d61b30f81b4aaf58d711c9a6db34e\AndroidManifest.xml:2:1-17:12
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.6.0.aar\ea48601c20154f2398672959279e05d7\AndroidManifest.xml:17:1-56:12
 MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\2d8564be80125dd6c8af3adfb512f7b2\AndroidManifest.xml:15:1-26:12
+MERGED from [com.splitwise:tokenautocomplete:2.0.8] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\tokenautocomplete-2.0.8.aar\cc65411ec6ab4d7eabb0aca08dee3f90\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3db5c7615ee4a5e8df1d009b54189f69\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\e80fbc0d4a99ceb4b0f8d280ef392d2b\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.3] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.3.aar\eb7319f4589baa3fbda4075ee65baf69\AndroidManifest.xml:17:1-34:12
@@ -164,6 +165,8 @@ MERGED from [github.hellocsl:CursorWheelLayout:1.1.0] C:\Users\Kyle\.gradle\cach
 MERGED from [github.hellocsl:CursorWheelLayout:1.1.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\CursorWheelLayout-1.1.0.aar\e21d61b30f81b4aaf58d711c9a6db34e\AndroidManifest.xml:11:5-15:19
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.6.0.aar\ea48601c20154f2398672959279e05d7\AndroidManifest.xml:46:5-54:19
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.6.0.aar\ea48601c20154f2398672959279e05d7\AndroidManifest.xml:46:5-54:19
+MERGED from [com.splitwise:tokenautocomplete:2.0.8] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\tokenautocomplete-2.0.8.aar\cc65411ec6ab4d7eabb0aca08dee3f90\AndroidManifest.xml:11:5-20
+MERGED from [com.splitwise:tokenautocomplete:2.0.8] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\tokenautocomplete-2.0.8.aar\cc65411ec6ab4d7eabb0aca08dee3f90\AndroidManifest.xml:11:5-20
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\e80fbc0d4a99ceb4b0f8d280ef392d2b\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\e80fbc0d4a99ceb4b0f8d280ef392d2b\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:17.0.3] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-measurement-connector-impl-17.0.3.aar\eb7319f4589baa3fbda4075ee65baf69\AndroidManifest.xml:26:5-32:19
@@ -427,6 +430,8 @@ MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\Kyle\.gradle
 MERGED from [com.journeyapps:zxing-android-embedded:3.6.0] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\zxing-android-embedded-3.6.0.aar\ea48601c20154f2398672959279e05d7\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\2d8564be80125dd6c8af3adfb512f7b2\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:16.0.5] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-storage-16.0.5.aar\2d8564be80125dd6c8af3adfb512f7b2\AndroidManifest.xml:19:5-21:41
+MERGED from [com.splitwise:tokenautocomplete:2.0.8] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\tokenautocomplete-2.0.8.aar\cc65411ec6ab4d7eabb0aca08dee3f90\AndroidManifest.xml:7:5-9:41
+MERGED from [com.splitwise:tokenautocomplete:2.0.8] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\tokenautocomplete-2.0.8.aar\cc65411ec6ab4d7eabb0aca08dee3f90\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3db5c7615ee4a5e8df1d009b54189f69\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\3db5c7615ee4a5e8df1d009b54189f69\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Kyle\.gradle\caches\transforms-1\files-1.1\firebase-auth-interop-16.0.1.aar\e80fbc0d4a99ceb4b0f8d280ef392d2b\AndroidManifest.xml:5:5-44

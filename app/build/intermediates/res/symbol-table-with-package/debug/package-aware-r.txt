@@ -980,6 +980,7 @@ drawable ic_drag_up
 drawable ic_egg_bw
 drawable ic_egg_col
 drawable ic_feed
+drawable ic_filters
 drawable ic_gluten_bw
 drawable ic_gluten_col
 drawable ic_heart
@@ -1051,6 +1052,7 @@ drawable square
 drawable tab_indicator_default
 drawable tab_indicator_selected
 drawable tab_selector
+drawable token_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable white_border
@@ -1091,6 +1093,7 @@ id alertTitle
 id all
 id always
 id anchored
+id applyButton
 id async
 id auto
 id barrier
@@ -1172,6 +1175,7 @@ id dimensions
 id direct
 id disableHome
 id distanceFilter
+id distanceInput
 id doneFriendAdder
 id dragger
 id editHandle
@@ -1193,6 +1197,7 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id filterButton
 id filterLayout
 id finishButton
 id fishBar
@@ -1201,6 +1206,7 @@ id fitCenter
 id fitXY
 id fixed
 id foodName
+id foodSearchBar
 id foodTypeTag
 id forever
 id friendList
@@ -1232,6 +1238,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id joinBtn
+id keyword
 id largeLabel
 id layoutBeef
 id layoutCrustacean
@@ -1313,7 +1320,6 @@ id passwordInput
 id percent
 id pin
 id place_autocomplete_clear_button
-id place_autocomplete_fragment
 id place_autocomplete_powered_by_google
 id place_autocomplete_prediction_primary_text
 id place_autocomplete_prediction_secondary_text
@@ -1326,10 +1332,12 @@ id porkCheck
 id preferenceLayout
 id preferenceText
 id priceFilter
+id priceInput
 id pricingTag
 id profilePic
 id progress_circular
 id progress_horizontal
+id quickEatsButton
 id radio
 id register
 id registerText
@@ -1378,6 +1386,7 @@ id showTitle
 id showlayout
 id signOutBtn
 id simpleText
+id sitDownButton
 id slidingPanel
 id smallLabel
 id snackbar_action
@@ -1441,6 +1450,7 @@ id tvUsername
 id tvWebsite
 id tv_faUserName
 id txtTitle
+id typeFilter
 id uniform
 id up
 id useLogo
@@ -1463,7 +1473,6 @@ id windowReviews
 id withText
 id wrap
 id wrap_content
-id yelpRating
 id zxing_back_button
 id zxing_barcode_scanner
 id zxing_barcode_surface
@@ -1535,8 +1544,9 @@ layout design_text_input_password_icon
 layout grid_item
 layout maplist_adapter_menuview
 layout maplist_adapter_restaurantview
-layout maplist_adapter_restaurantview1
+layout maplist_autocompletetag_token
 layout maplist_bottompanel
+layout maplist_filter_popup
 layout maplist_list
 layout maplist_map
 layout maplist_menu

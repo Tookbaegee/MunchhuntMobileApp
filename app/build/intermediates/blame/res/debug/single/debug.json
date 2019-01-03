@@ -84,6 +84,10 @@
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_filters.png"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -544,10 +548,6 @@
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\14b3fed116be6025d8f77f6b0a7ac545\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_maplist_adapter_restaurantview1.xml.flat",
-        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\layout\\maplist_adapter_restaurantview1.xml"
-    },
-    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_redmeat_bw.png.flat",
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_redmeat_bw.png"
     },
@@ -566,6 +566,10 @@
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_filters.xml.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_filters.xml"
     },
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -1210,6 +1214,10 @@
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_filters.png"
     },
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_dark.xml.flat",
@@ -1960,6 +1968,10 @@
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_add.png"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_filters.png"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_slideshow.xml.flat",
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\layout\\toolbars\\drawable-v21\\ic_menu_slideshow.xml"
     },
@@ -2030,6 +2042,10 @@
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_filters.png"
     },
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -2196,6 +2212,10 @@
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_add.xml"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_token_background.xml.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\drawable\\token_background.xml"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -2320,6 +2340,10 @@
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_arrow_back.png"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_filters.png"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_social_adapter_friendview.xml.flat",
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\layout\\social_adapter_friendview.xml"
     },
@@ -2358,6 +2382,10 @@
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_filters.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_filters.png"
     },
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_below_shadow.xml.flat",
@@ -3092,6 +3120,10 @@
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_maplist_filter_popup.xml.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\layout\\maplist_filter_popup.xml"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_notifications.png.flat",
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications.png"
     },
@@ -3456,6 +3488,10 @@
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_feed.xml"
     },
     {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_maplist_autocompletetag_token.xml.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\src\\main\\res\\layout\\maplist_autocompletetag_token.xml"
+    },
+    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_place_autocomplete_fragment.xml.flat",
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-places-16.0.0.aar\\6827e60d23baced5aff0e609a5cfdcd5\\res\\layout\\place_autocomplete_fragment.xml"
     },
@@ -3680,12 +3716,12 @@
         "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_peanut_col.png.flat",
-        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_peanut_col.png"
-    },
-    {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_clear_black_24dp.png.flat",
         "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_clear_black_24dp.png"
+    },
+    {
+        "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_peanut_col.png.flat",
+        "source": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_peanut_col.png"
     },
     {
         "merged": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",

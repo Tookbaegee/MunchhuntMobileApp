@@ -70,6 +70,8 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
     // Firebase Storage
     implementation 'com.google.firebase:firebase-storage:16.0.5'
+    // TagView
+    implementation 'com.splitwise:tokenautocomplete:2.0.8@aar'
 
 
 }
