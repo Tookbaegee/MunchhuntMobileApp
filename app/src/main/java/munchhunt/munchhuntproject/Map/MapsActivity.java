@@ -247,6 +247,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             }
         });
+        //Firebase code that needs to be changed into SQL
         SocialFirebase.callCurrentUser(new CurrentUserCallback() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -287,7 +288,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
             }
-        });
+        });//end of firebase data
 
         mRestaurantList.setOnTouchListener(new ListView.OnTouchListener() {
             @Override
@@ -390,6 +391,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 });
+
+                //Firebase Data that needs to converted
                 SocialFirebase.callCurrentUser(new CurrentUserCallback() {
                     @Override
                     public void callback(final User currentUser) {
@@ -430,7 +433,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                     }
-                });
+                });//end of firebase data
             }
         });
 
@@ -493,6 +496,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                     }
                 });
+
+
+                //FIREBASE DATA thats needs to be converted
                 SocialFirebase.callCurrentUser(new CurrentUserCallback() {
                     @Override
                     public void callback(final User currentUser) {
@@ -533,7 +539,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                     }
-                });
+                });//end of firebase data
             }
         });
 

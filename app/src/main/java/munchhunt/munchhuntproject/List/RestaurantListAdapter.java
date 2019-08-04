@@ -79,15 +79,6 @@ public class    RestaurantListAdapter extends ArrayAdapter<restaurant> {
             result = convertView;
         }
 
-/*
-        TextView restName = (TextView)convertView.findViewById(R.id.restName);
-        TextView restDirection = (TextView)convertView.findViewById(R.id.restLocation);
-        TextView restMunchRating = (TextView)convertView.findViewById(R.id.munchRating);
-        restName.setText(name);
-        restDirection.setText(direction);
-        restMunchRating.setText(munchRating);
-        */
-
         Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition)? R.anim.loading_down_anim: R.anim.loading_up_anim);
         result.startAnimation(animation);
         lastPosition = position;

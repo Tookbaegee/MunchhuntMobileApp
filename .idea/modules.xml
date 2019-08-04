@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MunchHuntProject.iml" filepath="$PROJECT_DIR$/.idea/MunchHuntProject.iml" />
+      <module fileurl="file://C:\Users\Adriane Inocencio\git\MunchHuntAndroid\munch-hunt-android-app\.idea\MunchHuntProject.iml" filepath="C:\Users\Adriane Inocencio\git\MunchHuntAndroid\munch-hunt-android-app\.idea\MunchHuntProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/munch-hunt-android-app.iml" filepath="$PROJECT_DIR$/munch-hunt-android-app.iml" />
     </modules>
   </component>
 </project>
