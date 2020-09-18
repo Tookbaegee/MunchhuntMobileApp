@@ -200,7 +200,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         getLocationPermission();
         autoComplete();
         markRestaurants();
-
+        // TestTest
         mRestaurantList = (ListView) findViewById(R.id.lvRestaurants);
         final List<Restaurant> restaurants = new ArrayList<Restaurant>();
         final RestaurantListAdapter rla = new RestaurantListAdapter(MapsActivity.this, R.layout.maplist_adapter_restaurantview, restaurants);
