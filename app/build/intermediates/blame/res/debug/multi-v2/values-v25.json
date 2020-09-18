@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "C:\\Users\\top12\\OneDrive\\Documents\\Munch-Hunt\\Android App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\top12\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1b6afd854e26e6f1b43def74b393d0c8\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

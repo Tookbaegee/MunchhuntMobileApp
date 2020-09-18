@@ -1,2 +1,2 @@
-# Referenced at F:\AndroidStudio Storage and Tools\copies\MunchHuntProject\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:53
+# Referenced at C:\Users\top12\OneDrive\Documents\Munch-Hunt\Android App\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:53
 -keep class android.support.multidex.MultiDexApplication { <init>(...); }

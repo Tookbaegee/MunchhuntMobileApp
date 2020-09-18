@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\AndroidStudio Storage and Tools\\copies\\MunchHuntProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\top12\\OneDrive\\Documents\\Munch-Hunt\\Android App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\14b3fed116be6025d8f77f6b0a7ac545\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\top12\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\f79e221d14e1eddf729852e4e5519a82\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Kyle\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\66f8abfde3dc7845266787a7012d7929\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\top12\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1b6afd854e26e6f1b43def74b393d0c8\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
